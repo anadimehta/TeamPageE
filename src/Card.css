@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Grotesque";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.eot"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.ttf"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Grotesque Black";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.eot"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.ttf"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.woff");
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  font-size: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: #152536;
+}
+
+article.card {
+  position: relative;
+  /* left: 50%;
+  top: 200%; */
+  /* left: 50%; */
+  width: 400px;
+  height: 400px;
+  /* transform: translate(-50%, -50%) translateZ(0); */
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  overflow: hidden;
+}
+article.card .thumb {
+  width: auto;
+  height: 310px;
+  background: url("E.png") no-repeat center;
+  background-size: cover;
+  border-radius: 3px;
+}
+article.card .infos {
+  width: auto;
+  height: 420px;
+  position: relative;
+  padding: 14px 24px;
+  background: #fff;
+  transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+article.card .infos .title {
+  position: relative;
+  margin: 5px 0;
+  letter-spacing: 1px;
+  color: #152536;
+  /* font-family: 'Grotesque Black', sans-serif;
+   */
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0px #32577f;
+  text-align: center;
+}
+
+article.card .infos .date, article.card .infos .seats {
+  margin-bottom: 10px;
+  /* text-transform: uppercase; */
+  font-size: 1.25rem;
+  color: rgba(9, 9, 10, 0.7);
+  font-family: 'Grotesque', sans-serif;
+}
+article.card .infos .seats {
+  font-family: 'Courier New', Courier, monospace;
+  display: inline;
+  margin-bottom: 24px;
+  padding-bottom: 2px; 
+  margin-top: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+  opacity: 0;
+  transition: 0.5s 0.25s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+article.card:hover .infos {
+  transform: translateY(-330px);
+}
+
+article.card:hover .title {
+  color: #f31111;
+  text-decoration: underline dotted rgb(226, 119, 119);
+  font-size: 35px;
+}
+article.card:hover .infos .seats, article.card:hover .infos .txt, article.card:hover .infos .details {
+  opacity: 1;
+}
+
+
